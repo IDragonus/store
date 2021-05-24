@@ -1,0 +1,14 @@
+{% extends 'lisshop/layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mt-3">Lista de ventas</h1>
+
+        <a class="btn btn-success" href="#">Generar venta</a>
+    </div>
+    <ul>
+        {% for sale in sales %}
+        <li>{{ sale }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

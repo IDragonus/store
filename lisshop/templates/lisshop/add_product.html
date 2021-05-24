@@ -1,0 +1,17 @@
+{% extends 'lisshop/layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center my-3">Agregar Producto</h1>
+        <form method="POST" class="text-center">
+            {% csrf_token %}
+            {% for label in form %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">{{ label.label }}</label>
+                <p>{{ label }}</p>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </form>
+    </div>
+{% endblock %}
